@@ -1,0 +1,42 @@
+name: Hexo Auto-Deploy
+on: [push]
+
+jobs:
+  build:
+    name: Hexo 自动部署
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 1. 检出
+      uses: actions/checkout@v2
+    
+    - name: 2. 构建静态文件 
+      run: |
+        npm install
+        npm run clean
+        npm run build
+
+    - name: 3. 部署到 GitHub Page
+      run: |
+        mkdir -p ~/.ssh/
+        echo "${{ secrets.ACTION }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        
+        git config --global user.name "无码"
+        git config --global user.email "dev@codeless.run"
+        git config --global core.quotepath false
+        
+        npm run deploy
+
+    - name: 4 部署到 CloudBase
+      uses: TencentCloudBase/cloudbase-action@v1.1.1
+      with:
+        # 云开发的访问密钥 secretId 和 secretKey
+        secretId: ${{ secrets.SECRET_ID }}
+        secretKey: ${{ secrets.SECRET_KEY }}
+        # 云开发的环境id
+        envId: ${{ secrets.ENV_ID }}
+        # Github 项目静态文件的路径
+        staticSrcPath: public 
+
