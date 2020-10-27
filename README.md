@@ -1,3 +1,1 @@
-# blog
-![Hexo Auto-Deploy](https://github.com/codelessrun/codelessrun/workflows/Hexo%20Auto-Deploy/badge.svg?branch=master)
-
+[![codelessrun's github stats](https://github-readme-stats.vercel.app/api?username=codelessrun)](https://github.com/codelessrun)
