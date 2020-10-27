@@ -12,7 +12,3 @@
 -  **Languages :** Java, ASM, Netty, Mysql
 -  **Hobbies :** ChineseChess :performing_arts: & Music :headphones:
 -  **Fact :** First solve the problem, then write the code :heart:
-
-### Wait for you
-
-<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love to make friends.</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> 😊</em>
