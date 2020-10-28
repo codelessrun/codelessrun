@@ -8,7 +8,6 @@ Hi , I'm DongJian , My dream is world peace :sparkles: :sparkles:
 
 ### About
 
--  **Learning :** Full-Stack Development :zap: | Open-Source :fire:    
--  **Languages :** Java, ASM, Netty, Mysql
--  **Hobbies :** ChineseChess :performing_arts: & Music :headphones:
--  **Fact :** First solve the problem, then write the code :heart:
+-  **Career Goal :** Full-Stack Development :fire: 
+-  **Languages and Tools:** Java, Mysql, Linux, Cloud Native :fire: 
+-  **Motto :** Feel life with your heart :heart: :heart:
