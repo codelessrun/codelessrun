@@ -30,7 +30,11 @@ jobs:
         envId: ${{ secrets.ENV_ID }}
         # Github 项目静态文件的路径
         staticSrcPath: public
-     
-    - name: 4. 使用 server 酱通知微信
-      run: 
-       curl https://sc.ftqq.com/${{ secrets.SERVER_CHAIN }}.send?text='博客更新成功！'
+
+    - name: 4. 通知
+      uses: codelessrun/serverchain-action
+      with:
+        # server酱的SendKey
+        sendKey: ${{ secrets.SERVER_CHAIN }}
+        # 通知的标题,必选
+        text: '博客更新成功啦!'
