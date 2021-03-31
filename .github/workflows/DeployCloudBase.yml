@@ -20,7 +20,7 @@ jobs:
         npm run clean
         npm run build
 
-    - name: 3 部署到 CloudBase
+    - name: 3. 部署到 CloudBase
       uses: TencentCloudBase/cloudbase-action@v1.1.1
       with:
         # 云开发的访问密钥 secretId 和 secretKey
@@ -29,4 +29,8 @@ jobs:
         # 云开发的环境id
         envId: ${{ secrets.ENV_ID }}
         # Github 项目静态文件的路径
-        staticSrcPath: public 
+        staticSrcPath: public
+     
+    - name: 4. 使用 server 酱通知微信
+      run: 
+       curl https://sc.ftqq.com/${{ secrets.SERVER_CHAIN }}.send?text='博客更新成功！'
