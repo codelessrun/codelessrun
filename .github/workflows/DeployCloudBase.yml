@@ -32,7 +32,7 @@ jobs:
         staticSrcPath: public
 
     - name: 4. 通知
-      uses: codelessrun/serverchain-action@ed8072499089571f34439f00e4f7e6025cc2793a
+      uses: codelessrun/serverchain-action@657237b1664324fad435658e893caa79a3958ff5
       with:
         # server酱的SendKey
         sendKey: ${{ secrets.SERVER_CHAIN }}
