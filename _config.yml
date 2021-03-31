@@ -101,5 +101,5 @@ deploy:
   type: git
   repo: git@github.com:codelessrun/codelessrun.github.io.git
   branch: master
-  message: 网站更新于 {{ now('YYYY-MM-DD HH:mm:ss') }})
+  message: 网站更新于 {{ now('YYYY-MM-DD HH:mm:ss') }}
   

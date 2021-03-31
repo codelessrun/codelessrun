@@ -21,20 +21,7 @@ jobs:
         npm run clean
         npm run build
 
-    - name: 3. 部署到 GitHub Page
-      run: |
-        mkdir -p ~/.ssh/
-        echo "${{ secrets.ACTION }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        
-        git config --global user.name "无码"
-        git config --global user.email "dev@codeless.run"
-        git config --global core.quotepath false
-        
-        npm run deploy
-
-    - name: 4 部署到 CloudBase
+    - name: 3 部署到 CloudBase
       uses: TencentCloudBase/cloudbase-action@v1.1.1
       with:
         # 云开发的访问密钥 secretId 和 secretKey
@@ -44,4 +31,3 @@ jobs:
         envId: ${{ secrets.ENV_ID }}
         # Github 项目静态文件的路径
         staticSrcPath: public 
-
