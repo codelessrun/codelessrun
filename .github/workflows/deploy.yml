@@ -1,5 +1,10 @@
-name: Hexo Auto-Deploy
-on: [push]
+name: Hexo 自动部署
+
+# 当推送时，或每天晚上11点（国际时间15点）执行
+on:
+  push:
+  schedule: 
+    - cron: '* 15 * * *' 
 
 jobs:
   build:
