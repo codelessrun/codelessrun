@@ -1,4 +1,4 @@
-name: Hexo 自动部署
+name: Hexo 自动部署 GitHub Page
 
 # 当推送时，或每天晚上11点（国际时间15点）执行
 on:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-    name: Hexo 自动部署
     runs-on: ubuntu-latest
 
     steps:
